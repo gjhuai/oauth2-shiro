@@ -15,19 +15,19 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <spring.version>3.2.2.RELEASE</spring.version>
+        <spring.version>3.2.18.RELEASE</spring.version>
         <aspectj.version>1.6.12</aspectj.version>
 
         <mysql.version>5.1.35</mysql.version>
         <oltu.version>1.0.2</oltu.version>
-        <shiro.version>1.2.3</shiro.version>
+        <shiro.version>1.4.2</shiro.version>
         <fasterxml.jackson.version>2.5.4</fasterxml.jackson.version>
 
         <!--jdbc execute sql config-->
         <jdbc.driver>com.mysql.jdbc.Driver</jdbc.driver>
-        <jdbc.url>jdbc:mysql://localhost:3306/oauth2_shiro_test?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf8</jdbc.url>
-        <jdbc.user>andaily</jdbc.user>
-        <jdbc.pass>andaily</jdbc.pass>
+        <jdbc.url>jdbc:mysql://192.168.31.200:3306/oauth2_shiro_test?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=utf8</jdbc.url>
+        <jdbc.user>dyys</jdbc.user>
+        <jdbc.pass>dyys345</jdbc.pass>
         <!--if do not use execute sql, change the value to true-->
         <!--<jdbc.execute.skip>false</jdbc.execute.skip>-->
         <test.skip>false</test.skip>
@@ -42,8 +42,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.2</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
@@ -53,7 +53,7 @@
                 <version>2.6</version>
                 <configuration>
                     <warSourceExcludes>*/classes/authz.properties</warSourceExcludes>
-                    <packagingExcludes>*/classes/authz.properties</packagingExcludes>
+                    <!-- <packagingExcludes>*/classes/authz.properties</packagingExcludes> -->
                     <archive>
                         <addMavenDescriptor>false</addMavenDescriptor>
                         <manifestEntries>

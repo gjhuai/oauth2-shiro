@@ -1,5 +1,11 @@
 package com.monkeyk.os.service.impl;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.monkeyk.os.domain.users.Users;
 import com.monkeyk.os.domain.users.UsersAuthzRepository;
 import com.monkeyk.os.service.UserService;
@@ -7,16 +13,13 @@ import com.monkeyk.os.service.business.UsersFormDtoLoader;
 import com.monkeyk.os.service.business.UsersFormSaver;
 import com.monkeyk.os.service.dto.UsersFormDto;
 import com.monkeyk.os.service.dto.UsersOverviewDto;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 /**
  * 2016/6/3
  *
  * @author Shengzhao Li
  */
+@Transactional
 @Service("userService")
 public class UserServiceImpl implements UserService {
 

@@ -16,9 +16,9 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <spring.version>3.2.2.RELEASE</spring.version>
+        <spring.version>3.2.18.RELEASE</spring.version>
         <oltu.version>1.0.2</oltu.version>
-        <shiro.version>1.2.3</shiro.version>
+        <shiro.version>1.4.2</shiro.version>
 
     </properties>
 
@@ -30,8 +30,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.2</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
@@ -119,8 +119,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
-            <version>1.7.5</version>
-            <scope>compile</scope>
+            <version>1.7.30</version>
         </dependency>
 
         <!--public test dependencies-->

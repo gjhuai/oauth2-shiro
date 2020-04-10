@@ -1,7 +1,7 @@
 package com.monkeyk.os.service.impl;
 
-import com.monkeyk.os.domain.oauth.*;
-import com.monkeyk.os.service.OauthService;
+import java.util.Set;
+
 import org.apache.oltu.oauth2.as.issuer.OAuthIssuer;
 import org.apache.oltu.oauth2.common.exception.OAuthSystemException;
 import org.apache.oltu.oauth2.common.utils.OAuthUtils;
@@ -10,14 +10,21 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Set;
+import com.monkeyk.os.domain.oauth.AccessToken;
+import com.monkeyk.os.domain.oauth.AuthenticationIdGenerator;
+import com.monkeyk.os.domain.oauth.ClientDetails;
+import com.monkeyk.os.domain.oauth.OauthCode;
+import com.monkeyk.os.domain.oauth.OauthRepository;
+import com.monkeyk.os.service.OauthService;
 
 /**
  * 15-6-10
  *
  * @author Shengzhao Li
  */
+@Transactional
 @Service("oauthService")
 public class OauthServiceImpl implements OauthService {
 
